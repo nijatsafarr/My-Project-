@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dərs 16</title>
+    <link rel="icon" type="icon/x-icon" href="https://cdn-icons-png.flaticon.com/128/16691/16691979.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: antiquewhite;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header {
+            height: 80vh;
+            width: 50vw;
+            background-color: whitesmoke;
+            padding: 0 10%;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+            align-items: self-start;
+            flex-direction: row;
+            border-radius: 10px;
+            background-image: url(https://images.pexels.com/photos/414630/pexels-photo-414630.jpeg?cs=srgb&dl=pexels-pixabay-414630.jpg&fm=jpg);
+            background-repeat: no-repeat;
+            /* Təkrarlanmanı söndürür */
+            background-size: cover;
+            /* Şəkli bütün ekrana tam yayır */
+            background-position: center;
+            /* Şəkli mərkəzə gətirir */
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .fa-java {
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            position: absolute;
+            left: 18%;
+            top: 15px;
+            padding: 5px;
+        }
+
+        .h1 {
+            color: rgb(232, 189, 131);
+            font-size: 3rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .link {
+            display: flex;
+            justify-content: end;
+            color: azure;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 30px;
+            left: 50px;
+        }
+
+        .link:hover {
+            color: rgb(0, 0, 0);
+            transition: 1.05s;
+        }
+
+        .welcome {
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            background-color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 30px;
+            padding: 5px;
+        }
+
+        .weserve {
+            position: absolute;
+            top: 35%;
+            left: 20%;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .ordernow {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 30px;
+            background-color: rgb(255, 254, 253);
+            padding: 5px;
+        }
+
+        .ordernow:hover {
+            background-color: rgb(246, 214, 173);
+            transform: scale(1.1);
+            transition: 1.08s;
+        }
+
+        .box-icon {
+            width: 100vw;
+            height: 100px;
+            background-color: antiquewhite;
+            display: flex;
+            position: absolute;
+            top: 85%;
+            left: 0%;
+        }
+
+        .fa-mug-hot {
+            display: flex;
+            position: absolute;
+            left: 40%;
+            margin-top: 20px;
+            font-size: 3rem;
+            color: #674a4a;
+        }
+
+        .fa-mug-hot:hover {
+            transform: scale(1.1);
+            transition: 1.08s;
+        }
+
+        .coffee {
+            display: flex;
+            position: absolute;
+            left: 39%;
+            top: 60%;
+            color: #674a4a;
+        }
+
+        .fa-ice-cream {
+            display: flex;
+            position: absolute;
+            left: 50%;
+            margin-top: 20px;
+            font-size: 3rem;
+            color: #674a4a;
+        }
+
+        .fa-ice-cream:hover {
+            transform: scale(1.1);
+            transition: 1.08s;
+        }
+
+        .ice-cream {
+            display: flex;
+            position: absolute;
+            left: 49%;
+            top: 60%;
+            color: #674a4a;
+        }
+
+        .fa-cookie-bite {
+            display: flex;
+            position: absolute;
+            left: 60%;
+            margin-top: 20px;
+            font-size: 3rem;
+            color: #674a4a;
+        }
+
+        .fa-cookie-bite:hover {
+            transform: scale(1.1);
+            transition: 1.08s;
+        }
+
+        .cookie {
+            display: flex;
+            position: absolute;
+            left: 60%;
+            top: 60%;
+            color: #674a4a;
+        }
+
+        .box2 {
+            width: 70vw;
+            height: 120vh;
+            background-color: rgb(236, 236, 239);
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: self-start;
+            margin: 120px;
+            margin-left: 220px;
+            border-radius: 10px;
+            flex-wrap: wrap;
+        }
+
+        .our-special {
+            display: flex;
+            position: relative;
+            left: 40%;
+            bottom: 40%;
+            color: #674a4a;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .card1,
+        .card2,
+        .card3,
+        .card4,
+        .card5,
+        .card6 {
+            width: 270px;
+            height: 350px;
+            margin: 10px;
+            background-color: #ffffff;
+            position: relative;
+            right: 5%;
+            border-radius: 20px;
+            border: 2px solid rgba(183, 178, 178, 0.458);
+        }
+
+        img {
+            width: 270px;
+            height: 200px;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .lungo {
+            margin: 10px;
+            font-size: 1rem;
+        }
+
+        .lorem {
+            margin: 10px;
+            color: gray;
+            font-size: small;
+        }
+
+        .price {
+            font-weight: bold;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .button {
+            text-decoration: none;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            padding: 8px;
+            margin-left: 50px;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            transition: 1.08s;
+        }
+
+        .dessert {
+            display: flexbox;
+            position: relative;
+            left: 40%;
+            bottom: 40%;
+            color: #674a4a;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .banner-box {
+            width: 100%;
+            height: 200px;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            margin-top: 970px;
+        }
+
+        .photo1 {
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        .check {
+            display: block;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: end;
+            margin: auto;
+            margin-top: 10px;
+            text-align: center;
+            position: relative;
+            right: 150px;
+        }
+
+        .photo2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: end;
+            margin: auto;
+            margin-top: 0px;
+            position: relative;
+            right: 180px;
+        }
+.slider-item {
+    min-width: 350px;
+    padding: 30px;
+    background-color: bisque;
+    border-radius: 10px;
+    .item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .p-img {
+        background-image: url();
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    .p-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: brown;
+    }
+    .p-spec {
+        font-size: 0.85rem;
+        color: #666;
+    }
+    .stars {color: #f2be01e;}
+    .item-info {
+        font-size: 0.9rem;
+        color: #333;
+        list-style: 1.6;
+        margin-top: 0.5rem;
+    }
+}
+        .banner-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            margin-top: 5px;
+            margin-right: 30px;
+            color: #3e2323;
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+
+        .banner-button {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            margin-top: 80px;
+            position: relative;
+            right: 350px;
+            text-decoration: none;
+            border-radius: 50px;
+            background-color: rgb(77, 59, 59);
+            color: #ffffff;
+            font-size: 1rem;
+            padding: 8px;
+        }
+
+        .banner-button:hover {
+            transform: scale(1.05);
+            transition: 0.8s;
+        }
+
+        /* .explore {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            background-color: black;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 20px;
+            margin-top: 550px;
+            margin: auto;
+        }
+
+        .explore:hover {
+            background-color: #674a4a;
+            scale: 0.8s;
+        } */
+
+        .subscribe h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3e2323;
+            margin-bottom: 2rem;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: bold;
+            color: #3e2323;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .sub-text {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            color: #674a4a;
+        }
+
+        .subscribe-form {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .form {
+            display: flex;
+            column-gap: 8px;
+            margin-top: 0px;
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .email {
+            background-color: white;
+            border-top-color: gray;
+            border-bottom-color: gray;
+            border-radius: 20px;
+            color: black;
+            display: block;
+            font-size: 16px;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .submit {
+            background-color: #3e2323;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .submit:hover {
+            background-color: #674a4a;
+        }
+
+        .footer-box {
+            display: inline;
+            width: 70vw;
+            height: 200px;
+            background-color: #3e2323;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            margin-top: 10px;
+            border-radius: 0 0 10px 10px;
+            gap: 40px;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            flex-direction: row;
+            color: antiquewhite;
+        }
+
+        .col-head {
+            display: flex;
+            justify-content: center;
+            align-items: self-start;
+            flex-direction: column;
+            color: antiquewhite;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        .col-item {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            text-decoration: none;
+            color: antiquewhite;
+        }
+
+        .fa-brands-fa-x-twitter {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: row;
+            text-decoration: none;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="h1">COFFEE
+            <i class="fa-brands fa-java" style="color: rgb(153, 104, 40);"></i>
+        </div>
+        <a href="#" class="link">HOME</a>
+        <a href="#" class="link">COFFEE</a>
+        <a href="#" class="link">BAKERY</a>
+        <a href="#" class="link">SHOP</a>
+        <a href="#" class="link">ABOUT</a>
+        <a href="#" class="link">LOGIN</a>
+        <p class="welcome">Welcome!</p>
+        <h5 class="weserve"> We serve the richest coffee in the city!</h5>
+        <a href="#" class="ordernow">Order Now</a>
+    </div>
+    <div class="box-icon" data-aos="fade-up">
+        <i class="fa-solid fa-mug-hot"></i><br>
+        <p class="coffee">Hot Coffee</p>
+        <i class="fa-solid fa-ice-cream"></i><br>
+        <p class="ice-cream">Ice cream</p>
+        <i class="fa-solid fa-cookie-bite"></i><br>
+        <p class="cookie">Deserts</p>
+
+        <div class="box2">
+            <p class="our-special">OUR SPECIAL COFFEE</p>
+            <div class="card1">
+                <img class="img" src="https://www.dolce-gusto.co.uk/media/wysiwyg/What_is_Lungo_1.png"
+                    alt="lungo coffee">
+                <h5 class="lungo">Lungo Coffee</h5>
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, temporibus.</p>
+                <p class="price">Rs. 199 <a href="#" class="button">Order Now</a></p>
+            </div>
+            <div class="card2">
+                <img class="img"
+                    src="https://cdn11.bigcommerce.com/s-cjh14ahqln/product_images/uploaded_images/finalimage-web.jpg"
+                    alt="dalgona coffee">
+                <h5 class="lungo">Dalgona Coffee</h5>
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, temporibus.</p>
+                <p class="price">Rs. 159 <a href="#" class="button">Order Now</a></p>
+            </div>
+            <div class="card3">
+                <img class="img"
+                    src="https://media.istockphoto.com/id/1455349023/photo/south-indian-filter-coffee.jpg?s=612x612&w=0&k=20&c=rUbLebRz4nrsvCQ85Y5gp7EzuJ9IFWbBzEcQkkwhovU="
+                    alt="dalgona coffee">
+                <h5 class="lungo">Filter Coffee</h5>
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, temporibus.</p>
+                <p class="price">Rs. 139 <a href="#" class="button">Order Now</a></p>
+            </div>
+            <p class="dessert">OUR SPECIAL DESSERT</p>
+            <div class="card4">
+                <img class="img"
+                    src="https://www.cadburydessertscorner.com/hubfs/dc-website-2022/articles/soft-gulab-jamun-recipe-for-raksha-bandhan-from-dough-to-syrup-all-you-need-to-know/soft-gulab-jamun-recipe-for-raksha-bandhan-from-dough-to-syrup-all-you-need-to-know.webp"
+                    alt="gulab Jamun">
+                <h5 class="lungo">Gulab Jamun</h5>
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, temporibus.</p>
+                <p class="price">Rs. 199 <a href="#" class="button">Order Now</a></p>
+            </div>
+            <div class="card5">
+                <img class="img"
+                    src="https://www.micheldumas.com/wp-content/uploads/2025/05/tiramisu1-ezgif.com-jpg-to-webp-converter-1-1.webp"
+                    alt="lungo coffee">
+                <h5 class="lungo">Tiramisu</h5>
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, temporibus.</p>
+                <p class="price">Rs. 260 <a href="#" class="button">Order Now</a></p>
+            </div>
+            <div class="card6">
+                <img class="img" src="https://zhangcatherine.com/wp-content/uploads/2023/02/12001200-1.jpg"
+                    alt="Churros">
+                <h5 class="lungo">Churros</h5>
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, temporibus.</p>
+                <p class="price">Rs. 199 <a href="#" class="button">Order Now</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Banner -->
+    <div class="banner-box" data-aos="fade-right" data-aos-duration="1500">
+        <img class="photo1"
+            src="https://png.pngtree.com/png-clipart/20250121/original/pngtree-coffee-png-image_19977635.png"
+            alt="Coffee">
+        <div class="banner-content" data-aos="fade-right" data-aos-duration="3000">
+            <p class="check">Check out our best <br> coffee beans</p>
+            <a href="#" class="banner-button">Explore our products</a>
+            <img class="photo2"
+                src="https://img.pikbest.com/png-images/20241222/pile-of-roasted-coffee-beans-on-white-background-a-transparent-png_11289090.png!sw800"
+                alt="Coffee">
+        </div>
+    </div>
+    <!-- Subscribe Buttonu -->
+    <div class="subscribe" data-aos="zoom-in" data-aos-duration="1500">
+        <h2>Join and get 15% off!</h2>
+        <p class="sub-text">Subscribe to our company and get 15% off discount code</p>
+        <form class="form" data-aos-delay="zoom-in">
+            <input class="email" type="email" placeholder="Email Adress" data-aos-delay="zoom-in">
+            <a href="#" class="submit" data-aos-delay="zoom-in">Subscribe</a>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Footer - Alt Hisse -->
+    <footer>
+        <div class="footer-box">
+            <h2>COFFEE</h2>
+            <div class="col-head" data-aos="fade-up" data-aos-duration="1500">PRIVACY
+                <a class="col-item" href="#">Terms of use</a>
+                <a href="#" class="col-item">Privacy Policy</a>
+                <a href="#" class="col-item">Account</a>
+            </div>
+            <div class="col-head" data-aos="fade-up" data-aos-duration="1500">SERVICES
+                <a class="col-item" href="#">Shop</a>
+                <a class="col-item" href="#">Order details</a>
+                <a class="col-item" href="#">Menu</a>
+            </div>
+            <div class="col-head" data-aos="fade-up" data-aos-duration="1500">ABOUT US
+                <a class="col-item" href="#">Find a location</a>
+                <a class="col-item" href="#">About us</a>
+                <a class="col-item" href="#">Our story</a>
+            </div>
+            <div class="col-head" data-aos="fade-up" data-aos-duration="1500">INFORMATION
+                <a class="col-item" href="#">Menu & pricing</a>
+                <a class="col-item" href="#">Set your Products</a>
+                <a class="col-item" href="#">Jobs</a>
+            </div>
+            <div class="col-item" data-aos="fade-up" data-aos-duration="1500">SOCIAL MEDIA
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-linkedin"></i>
+            </div>
+        </div>
+    </footer>
+    <script>
+        AOS.init(12);
+    </script>
+</body>
+
+</html>
